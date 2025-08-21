@@ -1,70 +1,143 @@
-# Getting Started with Create React App
+# Flowise - Web3区块链平台
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+这是一个基于React构建的Web3区块链品牌展示网站，展示了Flowise平台的核心功能、服务生态和发展愿景。
 
-## Available Scripts
+## 🌟 特性
 
-In the project directory, you can run:
+- **现代化设计**: 使用Tailwind CSS构建的响应式设计
+- **丰富动画**: 基于Framer Motion的流畅动画效果
+- **高端色调**: 采用紫色渐变主题，避免传统蓝色调
+- **图标库**: 使用Lucide React图标库
+- **单页应用**: 所有导航都是锚点链接，无需页面跳转
+- **Web3主题**: 完整的区块链生态系统展示
 
-### `npm start`
+## 🎨 设计亮点
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 色彩方案
+- 主色调：紫色渐变 (#d946ef - #c026d3 - #a21caf)
+- 背景：深色主题 (#0f172a - #1e293b - #334155)
+- 高对比度设计确保良好的可读性
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 动画效果
+- 页面滚动视差效果
+- 元素进入动画
+- 悬停交互效果
+- 浮动和脉冲动画
+- 渐变背景动画
 
-### `npm test`
+### 响应式设计
+- 移动端优化
+- 平板端适配
+- 桌面端完美展示
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📱 页面结构
 
-### `npm run build`
+1. **导航栏** - 固定顶部导航，包含品牌Logo和锚点链接
+2. **英雄区域** - 主要品牌展示和CTA按钮
+3. **统计数据** - 平台核心数据展示
+4. **核心功能** - 6个主要功能模块
+5. **服务生态** - 4大服务类别详细介绍
+6. **发展路线图** - 2024年发展计划时间线
+7. **团队介绍** - 核心团队成员展示
+8. **联系方式** - 联系信息和表单
+9. **页脚** - 版权信息和品牌标识
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ 技术栈
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **React 19.1.1** - 前端框架
+- **Tailwind CSS 4.1.12** - 样式框架
+- **Framer Motion 12.23.12** - 动画库
+- **Lucide React 0.540.0** - 图标库
+- **PostCSS & Autoprefixer** - CSS处理
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 快速开始
 
-### `npm run eject`
+### 安装依赖
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 启动开发服务器
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 构建生产版本
+```bash
+npm run build
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📂 项目结构
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+flowise/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── App.js          # 主应用组件
+│   ├── index.css       # 全局样式和Tailwind配置
+│   ├── index.js        # 应用入口
+│   └── ...
+├── tailwind.config.js  # Tailwind配置
+├── postcss.config.js   # PostCSS配置
+└── package.json
+```
 
-## Learn More
+## 🎯 核心功能展示
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 安全可靠
+- 最先进的加密技术
+- 安全协议保护
+- 数字资产安全
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 高速交易
+- Layer 2技术
+- 毫秒级确认
+- 低Gas费用
 
-### Code Splitting
+### 多链支持
+- 以太坊
+- Polygon
+- BSC等主流网络
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### 全球化服务
+- 200+国家覆盖
+- 多种法币支持
+- 本地化服务
 
-### Analyzing the Bundle Size
+### 社区驱动
+- 开发者社区
+- 持续创新
+- 开源精神
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 智能分析
+- AI驱动分析
+- 投资建议
+- 市场洞察
 
-### Making a Progressive Web App
+## 🌐 服务生态
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. **DeFi协议** - 完整的去中心化金融解决方案
+2. **NFT市场** - 数字艺术品创建和交易平台
+3. **DAO治理** - 去中心化自治组织参与
+4. **开发工具** - 区块链开发者工具包
 
-### Advanced Configuration
+## 📈 发展路线图
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Q1 2024**: 核心功能上线
+- **Q2 2024**: 生态扩展
+- **Q3 2024**: AI集成
+- **Q4 2024**: 全球化
 
-### Deployment
+## 🤝 贡献
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+欢迎提交Issue和Pull Request来改进这个项目。
 
-### `npm run build` fails to minify
+## 📄 许可证
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+© 2024 Flowise. 保留所有权利。
+
+---
+
+**联系我们**: contact@flowise.io
