@@ -314,7 +314,7 @@ const App = () => {
       <nav className="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-lg border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               className="flex items-center space-x-2"
@@ -324,12 +324,24 @@ const App = () => {
               </div>
               <span className="text-xl font-bold gradient-text">Flowise</span>
             </motion.div>
-            
+
             <div className="hidden md:flex space-x-8">
-              {['Home', 'Features', 'Services', 'Use Cases', 'Roadmap', 'Team', 'Contact'].map((item, index) => (
+              {[
+                'Home',
+                'Features',
+                'Services',
+                'Use Cases',
+                'Roadmap',
+                'Team',
+                'Contact',
+              ].map((item, index) => (
                 <motion.a
                   key={item}
-                  href={`#${item === 'Home' ? 'hero' : item.toLowerCase().replace(' ', '-')}`}
+                  href={`#${
+                    item === 'Home'
+                      ? 'hero'
+                      : item.toLowerCase().replace(' ', '-')
+                  }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
@@ -344,35 +356,42 @@ const App = () => {
       </nav>
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-screen flex items-center justify-center animated-bg">
-        <motion.div style={{ y: y1 }} className="absolute inset-0 overflow-hidden">
+      <section
+        id="hero"
+        className="relative min-h-screen flex items-center justify-center animated-bg"
+      >
+        <motion.div
+          style={{ y: y1 }}
+          className="absolute inset-0 overflow-hidden"
+        >
           <div className="absolute top-20 left-10 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-primary-400/5 rounded-full blur-3xl"></div>
         </motion.div>
-        
+
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
+            transition={{ duration: 1, ease: 'easeOut' }}
           >
-            <motion.div 
+            <motion.div
               className="mb-6"
               animate={{ rotate: [0, 5, -5, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
             >
               <Rocket className="w-16 h-16 text-primary-500 mx-auto mb-4" />
             </motion.div>
-            
+
             <h1 className="text-5xl md:text-8xl font-bold mb-6 leading-tight">
               <span className="gradient-text">Flowise</span>
               <br />
               <span className="text-gray-800">The Future of Web3</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto">
-              Revolutionary blockchain platform providing secure, efficient, and innovative Web3 experiences. 
-              Build, trade, and govern in the decentralized economy with enterprise-grade infrastructure.
+              Revolutionary blockchain platform providing secure, efficient, and
+              innovative Web3 experiences. Build, trade, and govern in the
+              decentralized economy with enterprise-grade infrastructure.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
               <motion.button
@@ -391,7 +410,7 @@ const App = () => {
                 Read Whitepaper
               </motion.button>
             </div>
-            
+
             {/* Trust indicators */}
             <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-500">
               <div className="flex items-center space-x-2">
@@ -438,7 +457,9 @@ const App = () => {
                 <div className="text-4xl md:text-5xl font-bold gradient-text mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-800 font-semibold mb-1">{stat.label}</div>
+                <div className="text-gray-800 font-semibold mb-1">
+                  {stat.label}
+                </div>
                 <div className="text-gray-500 text-sm">{stat.description}</div>
               </motion.div>
             ))}
@@ -460,8 +481,9 @@ const App = () => {
               <span className="gradient-text">Core Features</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Flowise provides comprehensive Web3 solutions with enterprise-grade security, 
-              lightning-fast performance, and seamless user experience across all blockchain networks.
+              Flowise provides comprehensive Web3 solutions with
+              enterprise-grade security, lightning-fast performance, and
+              seamless user experience across all blockchain networks.
             </p>
           </motion.div>
 
@@ -481,8 +503,12 @@ const App = () => {
                 <div className="text-primary-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </motion.div>
@@ -503,8 +529,9 @@ const App = () => {
               <span className="gradient-text">Service Ecosystem</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Build a complete Web3 ecosystem with our comprehensive suite of services, 
-              designed to power the next generation of decentralized applications and financial products.
+              Build a complete Web3 ecosystem with our comprehensive suite of
+              services, designed to power the next generation of decentralized
+              applications and financial products.
             </p>
           </motion.div>
 
@@ -523,13 +550,18 @@ const App = () => {
                     {service.icon}
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold text-gray-800">{service.title}</h3>
+                    <h3 className="text-2xl font-semibold text-gray-800">
+                      {service.title}
+                    </h3>
                   </div>
                 </div>
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="space-y-3">
                   {service.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="flex items-center space-x-3">
+                    <div
+                      key={itemIndex}
+                      className="flex items-center space-x-3"
+                    >
                       <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700">{item}</span>
                     </div>
@@ -555,8 +587,9 @@ const App = () => {
               <span className="gradient-text">Real-World Applications</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover how Flowise is transforming industries with practical Web3 solutions 
-              that deliver real value to businesses and individuals worldwide.
+              Discover how Flowise is transforming industries with practical
+              Web3 solutions that deliver real value to businesses and
+              individuals worldwide.
             </p>
           </motion.div>
 
@@ -573,11 +606,18 @@ const App = () => {
                 <div className="text-primary-500 mb-4 group-hover:scale-110 transition-transform duration-300">
                   {useCase.icon}
                 </div>
-                <h3 className="text-lg font-semibold mb-3 text-gray-800">{useCase.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{useCase.description}</p>
+                <h3 className="text-lg font-semibold mb-3 text-gray-800">
+                  {useCase.title}
+                </h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  {useCase.description}
+                </p>
                 <div className="space-y-2">
                   {useCase.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center space-x-2">
+                    <div
+                      key={featureIndex}
+                      className="flex items-center space-x-2"
+                    >
                       <div className="w-1.5 h-1.5 bg-primary-500 rounded-full"></div>
                       <span className="text-xs text-gray-600">{feature}</span>
                     </div>
@@ -603,14 +643,15 @@ const App = () => {
               <span className="gradient-text">Development Roadmap</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our vision is to build the most comprehensive Web3 ecosystem. 
-              Here's our strategic development plan to revolutionize decentralized technology.
+              Our vision is to build the most comprehensive Web3 ecosystem.
+              Here's our strategic development plan to revolutionize
+              decentralized technology.
             </p>
           </motion.div>
 
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-primary-500 to-primary-700"></div>
-            
+
             {roadmapItems.map((item, index) => (
               <motion.div
                 key={index}
@@ -622,31 +663,49 @@ const App = () => {
                   index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                 }`}
               >
-                <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
+                <div
+                  className={`w-1/2 ${
+                    index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
+                  }`}
+                >
                   <div className="bg-white p-6 rounded-2xl border border-gray-200 hover:border-primary-300 transition-all duration-300">
                     <div className="flex items-center justify-between mb-2">
-                      <div className="text-primary-500 font-semibold">{item.quarter}</div>
-                      <div className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        item.status === 'Completed' ? 'bg-green-100 text-green-800' :
-                        item.status === 'In Progress' ? 'bg-blue-100 text-blue-800' :
-                        item.status === 'Upcoming' ? 'bg-yellow-100 text-yellow-800' :
-                        'bg-gray-100 text-gray-800'
-                      }`}>
+                      <div className="text-primary-500 font-semibold">
+                        {item.quarter}
+                      </div>
+                      <div
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          item.status === 'Completed'
+                            ? 'bg-green-100 text-green-800'
+                            : item.status === 'In Progress'
+                            ? 'bg-blue-100 text-blue-800'
+                            : item.status === 'Upcoming'
+                            ? 'bg-yellow-100 text-yellow-800'
+                            : 'bg-gray-100 text-gray-800'
+                        }`}
+                      >
                         {item.status}
                       </div>
                     </div>
-                    <h3 className="text-xl font-semibold mb-4 text-gray-800">{item.title}</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-gray-800">
+                      {item.title}
+                    </h3>
                     <div className="space-y-2">
                       {item.items.map((subItem, subIndex) => (
-                        <div key={subIndex} className="flex items-start space-x-2">
+                        <div
+                          key={subIndex}
+                          className="flex items-start space-x-2"
+                        >
                           <Star className="w-4 h-4 text-primary-500 flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-600 text-sm">{subItem}</span>
+                          <span className="text-gray-600 text-sm">
+                            {subItem}
+                          </span>
                         </div>
                       ))}
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white shadow-lg"></div>
               </motion.div>
             ))}
@@ -668,8 +727,9 @@ const App = () => {
               <span className="gradient-text">Leadership Team</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our world-class team brings together decades of experience from leading technology companies, 
-              financial institutions, and blockchain organizations to drive Web3 innovation.
+              Our world-class team brings together decades of experience from
+              leading technology companies, financial institutions, and
+              blockchain organizations to drive Web3 innovation.
             </p>
           </motion.div>
 
@@ -689,9 +749,15 @@ const App = () => {
                 <div className="w-20 h-20 bg-gradient-to-r from-primary-500 to-primary-700 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-10 h-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold mb-1 text-gray-800">{member.name}</h3>
-                <p className="text-primary-600 mb-3 font-medium">{member.role}</p>
-                <p className="text-gray-600 text-sm mb-2">{member.experience}</p>
+                <h3 className="text-lg font-semibold mb-1 text-gray-800">
+                  {member.name}
+                </h3>
+                <p className="text-primary-600 mb-3 font-medium">
+                  {member.role}
+                </p>
+                <p className="text-gray-600 text-sm mb-2">
+                  {member.experience}
+                </p>
                 <p className="text-gray-500 text-xs">{member.expertise}</p>
               </motion.div>
             ))}
@@ -713,8 +779,9 @@ const App = () => {
               <span className="gradient-text">Get In Touch</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Ready to start your Web3 journey? Contact our team to learn more about 
-              Flowise solutions and how we can help transform your business.
+              Ready to start your Web3 journey? Contact our team to learn more
+              about Flowise solutions and how we can help transform your
+              business.
             </p>
           </motion.div>
 
@@ -731,39 +798,51 @@ const App = () => {
                     <Mail className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Email</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Email
+                    </h3>
                     <p className="text-gray-600">contact@flowise.io</p>
-                    <p className="text-gray-500 text-sm">Response within 24 hours</p>
+                    <p className="text-gray-500 text-sm">
+                      Response within 24 hours
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
                     <Phone className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Phone</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Phone
+                    </h3>
                     <p className="text-gray-600">+1 (555) 123-4567</p>
                     <p className="text-gray-500 text-sm">Mon-Fri 9AM-6PM PST</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary-600" />
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800">Headquarters</h3>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      Headquarters
+                    </h3>
                     <p className="text-gray-600">San Francisco, California</p>
-                    <p className="text-gray-500 text-sm">Global offices worldwide</p>
+                    <p className="text-gray-500 text-sm">
+                      Global offices worldwide
+                    </p>
                   </div>
                 </div>
 
                 <div className="pt-8">
-                  <h3 className="text-lg font-semibold text-gray-800 mb-4">Follow Us</h3>
+                  <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                    Follow Us
+                  </h3>
                   <div className="flex space-x-4">
                     <motion.a
-                      href="#"
+                      href="https://x.com/OneFlowise"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center text-primary-600 hover:bg-primary-500 hover:text-white transition-all duration-300"
@@ -784,7 +863,10 @@ const App = () => {
             >
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Full Name
                   </label>
                   <input
@@ -799,7 +881,10 @@ const App = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -814,7 +899,10 @@ const App = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message
                   </label>
                   <textarea
@@ -828,17 +916,19 @@ const App = () => {
                     placeholder="Tell us about your project or inquiry..."
                   ></textarea>
                 </div>
-                
+
                 {submitMessage && (
-                  <div className={`p-4 rounded-lg ${
-                    submitMessage.includes('successfully') 
-                      ? 'bg-green-50 text-green-800 border border-green-200' 
-                      : 'bg-red-50 text-red-800 border border-red-200'
-                  }`}>
+                  <div
+                    className={`p-4 rounded-lg ${
+                      submitMessage.includes('successfully')
+                        ? 'bg-green-50 text-green-800 border border-green-200'
+                        : 'bg-red-50 text-red-800 border border-red-200'
+                    }`}
+                  >
                     {submitMessage}
                   </div>
                 )}
-                
+
                 <motion.button
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
@@ -874,14 +964,39 @@ const App = () => {
               </div>
               <span className="text-xl font-bold gradient-text">Flowise</span>
             </div>
-            <p className="text-gray-600 mb-4">Building the future of Web3, making blockchain technology accessible to everyone.</p>
+            <p className="text-gray-600 mb-4">
+              Building the future of Web3, making blockchain technology
+              accessible to everyone.
+            </p>
             <div className="flex justify-center space-x-6 mb-6">
-              <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors">Privacy Policy</a>
-              <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors">Terms of Service</a>
-              <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors">Documentation</a>
-              <a href="#" className="text-gray-500 hover:text-primary-600 transition-colors">Support</a>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-primary-600 transition-colors"
+              >
+                Privacy Policy
+              </a>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-primary-600 transition-colors"
+              >
+                Terms of Service
+              </a>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-primary-600 transition-colors"
+              >
+                Documentation
+              </a>
+              <a
+                href="#"
+                className="text-gray-500 hover:text-primary-600 transition-colors"
+              >
+                Support
+              </a>
             </div>
-            <p className="text-gray-500 text-sm">© 2025 Flowise. All rights reserved.</p>
+            <p className="text-gray-500 text-sm">
+              © 2025 Flowise. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
